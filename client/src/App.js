@@ -1,15 +1,31 @@
-// import logo from './logo.svg';
-import './App.css';
-
-import Navbar from "./components/Navbar";
-// import Project from "./components/Project";
+import React, {useState} from "react";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+// import Page from "./components/Page";
 // import Footer from "./components/Footer";
 
 function App() {
+  const [pages] = useState([
+    {name: "about"},
+    {name: "work"},
+    {name: "contact"},
+    {name: "resume"}
+  ]);
+
+  const [current, setCurrent] = useState(pages[0]);
   return (
     <>
-      <Navbar />
-
+      <Header>
+      <Nav 
+        pages={pages}
+        setCurrent={setCurrent}
+        current={current}>
+      </Nav>
+      </Header>
+      {/* <main>
+        <Page current={current}></Page>
+      </main>
+      <Footer /> */}
     </>
   );
 }
