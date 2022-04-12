@@ -1,14 +1,13 @@
 import React from 'react';
 
-function Nav(props) {
-  const {
-    pages = [],
-    setCurrent,
-    current,
-  } = props;
+function Nav({ currentPage, handlePageChange }) {
   return(
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <a className="navbar-brand" href="#about">Samantha J. Rexroat</a>
+    <a 
+      className={currentPage === 'Home' ? 'nav-brand active' : 'nav-link'}
+      href="#home"
+      onClick={() => handlePageChange('Home')}
+      >Samantha J. Rexroat</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
