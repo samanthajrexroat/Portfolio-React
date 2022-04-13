@@ -1,10 +1,22 @@
 import React from 'react';
 
+const styles = {
+  heading: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#bdc3c7',
+    minHeight: '12vh',
+    fontSize: '2rem',
+    color: '#424141'
+  }
+};
+
 function Nav({ currentPage, handlePageChange }) {
   return(
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav style={styles.heading} className="navbar navbar-expand-lg navbar-light bg-light">
     <a 
-      className={currentPage === 'Home' ? 'nav-brand active' : 'nav-link'}
+      className={currentPage === 'Home' ? 'nav-link active name' : 'nav-link name'}
       href="#home"
       onClick={() => handlePageChange('Home')}
       >Samantha J. Rexroat</a>

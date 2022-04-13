@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  font-family: 'Source Serif 4', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* This sets the font size default to 10px */
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styling the nav bar */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: radial-gradient(#eaebeb, rgb(196, 195, 195));
+  background-color: #bdc3c7;
+  min-height: 12vh;
+  font-size: 2rem;
+  color: #424141;
 }
 
-.App-header {
-  background-color: #282c34;
+/* styling anchor links in nav bar */
+nav a{
+  text-decoration: none;
+  padding: 1.5rem;
+  font-weight: 800;
+}
+/* giving the links a cool shadow effect */
+a:hover{
+  text-shadow: 2px 2px 5px #2980b9;
+
+}
+
+/* making the links horizontal */
+.nav-links li {
+  display: inline-flex;
+  
+}
+
+/* making my name bigger than the other links */
+.name {
+  font-size: 6rem;
+  font-weight: 1000;
+  text-shadow: 1px 1px rgb(174, 171, 171);
+}
+
+/* styling the main,
+which will contain the three 
+sections of the site */
+main{
+  display: flex;
+  background-image: radial-gradient(#f4f6f7,#cbd7da);
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+/* styling anchor tags */
+a{
+  font-size: 3rem;
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+/* styling my paragraph text */
+p {
+  font-size: 2rem;
+  text-align: left;
+  line-height: 3rem;
+  letter-spacing: .2rem;
+  padding: 25px;
+}
+
+/* styling the div */
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* styling my portrait */
+.project-img {
+  display: flex;
+  max-width: 300px;
+  max-height: 400px;
+  border-radius: 15rem;
+  margin: 7rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* styling the containers for the sections */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling the headers for each section */
+.project-info h2 {
+  text-align: left;
+  padding: 1.5rem;
+  margin-top: 8rem;
+  font-size: 6rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* styling the cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  /* flex: 0 0 40rem; */
+}
+
+/* styling the card image */
+.card img{
+  width: 100%;
+  height: 40rem;
+  width: 30rem; 
+  border-radius: 5rem;
+  padding: 2rem;
+  align-self: center; 
+  justify-self: center;
+}
+
+/* styling the card text */
+.card h3 {
+  display: block;
+  font-size: 4rem;
+  margin-block-start: .83rem;
+  margin-block-end: .83rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+/* styling the link to my most recent
+work project */
+.card a {
+  display: block;
+  font-size: 2rem;
+  margin-block-start: .83rem;
+  margin-block-end: .83rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* making the most recent work project
+larger than the others. */
+#most-recent {
+  height: 50rem;
+  width: 40rem;
+  display: block;
+  padding: 2rem;
+} 
+
+/* media query for card layout */
+@media(min-width: 320px){
+  .card-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links li {
+      display: inline-flex;
+      flex-direction: column;
+  }
+
+  nav{
+      flex-direction: column;
+  }
+  #most-recent {
+      width: 100%;
+      height: 40rem;
+      width: 30rem; 
+      border-radius: 5rem;
+      padding: 2rem;
+      align-self: center; 
+      justify-self: center;
+  }
+
+  #email{
+      font-size: 1.5rem;
   }
 }
