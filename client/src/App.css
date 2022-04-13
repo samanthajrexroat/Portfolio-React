@@ -124,8 +124,10 @@ p {
   flex-direction: column;
   padding: 10px;
   margin: 10px;
+  border-radius: 5rem;
   justify-content: center;
   align-items: center;
+  background-color: #bdc3c7;
   /* flex: 0 0 40rem; */
 }
 
